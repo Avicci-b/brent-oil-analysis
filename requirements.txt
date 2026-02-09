@@ -1,0 +1,40 @@
+# Core Data Science
+pymc>=5.0
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+statsmodels>=0.14.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+bokeh>=3.2.0
+
+# Jupyter & Development
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+ipykernel>=6.25.0
+ipython>=8.14.0
+
+# Dashboard Backend
+flask>=2.3.0
+flask-cors>=4.0.0
+flask-restx>=1.1.0
+gunicorn>=21.2.0
+
+# Utilities
+python-dotenv>=1.0.0
+pytest>=7.4.0
+black>=23.7.0
+flake8>=6.0.0
+pre-commit>=3.3.0
+
+# Time Series Specific
+arch>=6.2.0
+pmdarima>=2.0.3
+
+# Data Processing
+openpyxl>=3.1.0
+xlrd>=2.0.0
