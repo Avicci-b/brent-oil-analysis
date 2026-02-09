@@ -50,6 +50,8 @@ Thumbs.db
 # Data files (except processed/clean versions)
 data/raw/
 data/outputs/
+data/processed/brent_clean.csv
+data/processed/brent_returns.csv
 models/
 
 # Logs
