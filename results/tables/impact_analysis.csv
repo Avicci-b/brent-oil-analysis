@@ -1,0 +1,2 @@
+change_point_date, before_mean           , after_mean            , mean_change          , percent_change    , volatility_change     , effect_size        , closest_event                 , event_date, days_difference, event_type            , event_severity
+2013-05-09       , -0.0010464450158835052, -0.0003454262345182239, 0.0007010187813652814, -66.99050315351894, -0.0019527450177583006, 0.04545530655481492, EU imposes oil embargo on Iran, 2012-07-01,             312, Geopolitical/Sanctions, High
