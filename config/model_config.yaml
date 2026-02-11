@@ -1,0 +1,64 @@
+# Bayesian Change Point Model Configuration
+model:
+  name: "bayesian_change_point"
+  description: "Single change point detection in Brent oil prices"
+  
+  change_point:
+    type: "logistic"
+    width: 7
+
+  priors:
+    tau:
+      distribution: "uniform"
+      lower: 0
+      upper: "auto"  # Will be set to number of observations
+    mu1:
+      distribution: "normal"
+      mu: 0.0
+      sigma: 0.02
+    mu2:
+      distribution: "normal"
+      mu: 0.0
+      sigma: 0.02
+    sigma:
+      distribution: "halfnormal"
+      sigma: 0.05
+  
+  sampling:
+    draws: 3000
+    tune: 3000
+    chains: 4
+    cores: 4
+    target_accept: 0.99
+  
+  convergence:
+    rhat_threshold: 1.01
+    ess_threshold: 400
+
+data:
+  price_column: "price"
+  date_column: "date"
+  log_returns: true
+  normalize: true
+  
+  preprocessing:
+    remove_outliers: true
+    outlier_threshold: 3.0  # z-score threshold
+    fill_method: "forward"
+    min_periods: 100
+
+analysis:
+  window_size: 30  # days for rolling statistics
+  event_window: 60  # days before/after event for analysis
+  
+visualization:
+  style: "seaborn-darkgrid"
+  figsize: [15, 8]
+  colors:
+    price: "#2E86AB"
+    change_point: "#A23B72"
+    before: "#3C91E6"
+    after: "#FA824C"
+    events: "#342E37"
+  save_format: "png"
+  dpi: 300
