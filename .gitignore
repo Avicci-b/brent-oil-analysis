@@ -53,6 +53,7 @@ data/outputs/
 data/processed/brent_clean.csv
 data/processed/brent_returns.csv
 models/
+notebooks/data
 
 # Logs
 *.log
